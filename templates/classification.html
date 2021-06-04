@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Image Classification {% endblock %}</h1>
+Upload an image here and see what it is classified as. 
+
+<form action="/" method="post" enctype="multipart/form-data">
+    <label for="img">Upload image:</label>
+    <input type="file" id="img" name="img" accept="image/*">
+    <input type="submit">
+  </form>
+<p id="out"></p>
+
+
+<br>
+    <p>The closest prediction: {{prediction_text}}</p>
+
+
+  {% endblock %}
+
