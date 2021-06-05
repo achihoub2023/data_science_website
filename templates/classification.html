@@ -2,8 +2,9 @@
 
 {% block content %}
 <h1>{% block title %} Image Classification {% endblock %}</h1>
-Upload an image here and see what it is classified as. 
-
+Upload an image here and see what it is classified as using a pretrained neural network. You can download an image of a digital clock here:
+<a href="static/data/digital_clock.jpg" download> Image</a> 
+Due to the image's nature, it should be classified as a tray instead. 
 <form action="/" method="post" enctype="multipart/form-data">
     <label for="img">Upload image:</label>
     <input type="file" id="img" name="img" accept="image/*">

@@ -79,7 +79,7 @@ Below, the website is preloaded with housing data from the UCI ML Repository. It
 <h1> Min and Max of Various Tuples</h1>
 <p>
 Below, there is a form you can submit if you are interested in finding out which house has the highest number of each category.
-<form action-"/data_viz" method = "POST">
+<form action="/data_viz" method = "POST">
     <p>Attribute <input type = "text" name = "Attribute" /></p>
     <input type="submit" name="max" value = "Search">
 </form>
@@ -95,7 +95,7 @@ Below, there is a form you can submit if you are interested in finding out which
 
 <p>
     Below, there is a form you can submit if you are interested in finding out which house has the lowest number of each category.
-    <form action-"/data_viz" method = "POST">
+    <form action="/data_viz" method = "POST">
         <p>Attribute <input type = "text" name = "Attribute" /></p>
         <input type="submit" name="min" value = "Search">
     </form>
@@ -106,4 +106,45 @@ Below, there is a form you can submit if you are interested in finding out which
 <br>
 {% endif %}
 
+<h2>Relationship between Two Variables</h2>
+    <p>Using the dropdown below, select two variables and a graph will be displayed below.
+        <br>
+        <form action="/data_viz" method = "POST">
+            <input type="checkbox" id="CRIM" name="vals" value="CRIM">
+            <label for="CRIM"> CRIM</label>
+            <input type="checkbox" id="ZN" name="vals" value="ZN">
+            <label for="ZN"> ZN</label>
+            <input type="checkbox" id="INDUS" name="vals" value="INDUS">
+            <label for="INDUS">INDUS</label>
+            <input type="checkbox" id="CHAS" name="vals" value="CHAS">
+            <label for="CHAS">CHAS</label>
+            <input type="checkbox" id="NOX" name="vals" value="NOX">
+            <label for="NOX">NOX</label>
+            <input type="checkbox" id="RM" name="vals" value="RM">
+            <label for="RM">RM</label>
+            <input type="checkbox" id="AGE" name="vals" value="AGE">
+            <label for="AGE">AGE</label>
+            <input type="checkbox" id="DIS" name="vals" value="DIS">
+            <label for="DIS">DIS</label>
+            <input type="checkbox" id="RAD" name="vals" value="RAD">
+            <label for="RAD">RAD</label>
+            <input type="checkbox" id="TAX" name="vals" value="TAX">
+            <label for="TAX">TAX</label>
+            <input type="checkbox" id="PTRATION" name="vals" value="PTRATION">
+            <label for="PTRATION">PTRATION</label>
+            <input type="checkbox" id="B" name="vals" value="B">
+            <label for="B">B</label>
+            <input type="checkbox" id="LSTAT" name="vals" value="LSTAT">
+            <label for="LSTAT">LSTAT</label>
+            <input type="checkbox" id="MEDV" name="vals" value="MEDV">
+            <label for="MEDV">MEDV</label>
+            <input type="submit" name="submit_graphs" value ="Generate Graphs">
+    </form>
+    </p>
+    {% if fig == 'succ'%}
+        <p>The scatterplot is below</p>
+        <br>
+        <img src={{url_for('static', filename='created/created.png') }}>
+    {% endif %}
+    
 {% endblock %}

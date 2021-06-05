@@ -1,4 +1,4 @@
-ID,Access to Radial Highways,Distances,Crime Rate,Pre-1940 Buildings,Non-retail,Number of rooms,Pupil-Teacher Ratio,NOX Concentration,Lower Status of Population,African Americans,Median Value of owner-occuspied homes,Riverside,Zoning,Taxes
+ID,CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT,MEDV
 0,0.02731,0.0,7.07,0,0.469,6.421,78.9,4.9671,2,242,17.8,396.9,9.14,21.6
 1,0.02729,0.0,7.07,0,0.469,7.185,61.1,4.9671,2,242,17.8,392.83,4.03,34.7
 2,0.03237,0.0,2.18,0,0.458,6.998,45.8,6.0622,3,222,18.7,394.63,2.94,33.4
